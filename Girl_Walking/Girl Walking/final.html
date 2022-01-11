@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+	margin:0px;
+
+}
+
+body{
+	background-color:black;
+}
+
+#container{
+	position: relative;
+	width:100%;
+	height:100vh;
+
+	background-image: url("fundo arvores.png");
+	background-size: 150vh 100%;
+	background-position: 0px 0px;
+
+	animation: cenarioAndar 70s linear infinite;
+}
+
+#grama{
+	position: absolute;
+	width:100%;
+	height:213px;
+
+	top:75%;
+	margin: auto;
+
+	background-image: url("Grama.png");
+	background-size: 1200px 213px;
+
+	background-repeat: repeat-x;
+
+	animation: cenarioAndar 50s linear infinite;
+}
+
+#garota{
+	position: absolute;
+	height: 40%;
+	left: 50%;
+	bottom: 10%;
+	transform: translateX(-50%);
+}
+
+#poste{
+	position: absolute;
+	width: 100vw;
+	height: 580px;
+
+	top:25%;
+	margin: auto;
+
+	background-image: url("Poste.png");
+	background-size: cover;
+	background-repeat: repeat-x;
+
+
+	animation: cenarioAndar 50s linear infinite;
+	
+}
+
+@media (max-width: 800px){
+	#container{
+	height: 320px;
+}
+	#grama{
+	height: 50%;
+}
+	#garota{
+	top:40px;
+	height: 100%;
+}
+	#poste{
+	top:0%;
+	bottom: 30%;
+	height: 500px;
+}
+}
+
+@keyframes cenarioAndar {
+100% {
+	background-position: -500vw 0px;
+}
+
+
+
+
+</style>
+
+<title>Walking girl</title>
+</head>
+<body>
+
+<div id = "container">
+	<img src = "frame0000.gif" id = "garota">
+	<div id = "poste"></div>
+	<div id = "grama"></div>
+</div>
+
+</body>
+</html>
